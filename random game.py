@@ -14,23 +14,22 @@ def generate_target_number(lower_limit=17, upper_limit=29):
 if __name__ == "__main__":
    target_number = generate_target_number()
 
-   print(f'The target number is {target_number}')
-   print()
+print(f'The target number is {target_number}')
+print()
 
-    #set total to zero
+total = 0
 
-#FOREEVER
+while True:
+    this_roll = roll_dice()
+    total += this_roll
 
-   # Roll the dice
+    print(f'You rolled {this_roll}. Your total is {total}.')
 
-    #add the roll to total
+    again = input('Would you like to roll again? (y/n): ')
 
-    #tell the user what the total is.
+    if again == 'n':
+        break
 
-     #As the user if they want to stop
-
-     #if the user want to stop EXIT
-
-     # display the final scores -
-#     Differnce if within 5 , or you lose
+score = abs(total - target_number)
+# Difference if within 5... or you lose
 
